@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import Navbar from './Navbar'
-import Create from './Create';
-import BlogDetails from './BlogDetails';
+import Create from './Create'
+import BlogDetails from './BlogDetails'
+import NotFound from './NotFound'
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path='/blog/:id'>
               <BlogDetails/>
+            </Route>
+            <Route path='*'>
+              <NotFound/>
             </Route>
           </Switch>
         </div>
